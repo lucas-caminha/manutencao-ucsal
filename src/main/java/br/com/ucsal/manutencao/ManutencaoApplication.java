@@ -1,13 +1,13 @@
-package br.com.ucsal.reserva;
+package br.com.ucsal.manutencao;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ReservaApplication {
+public class ManutencaoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ReservaApplication.class, args);
+		SpringApplication.run(ManutencaoApplication.class, args);
 	}
 
 }
