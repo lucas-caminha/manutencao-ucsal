@@ -3,11 +3,11 @@ package br.com.ucsal.manutencao.entity;
 import javax.persistence.Entity;
 
 @Entity(name = "solicitante")
-public class Solicitante extends Usuario {
+public class SolicitanteEntity extends UsuarioEntity {
 
 	private TipoDeUsuario tipoUsuario;
 	
-	public Solicitante () {
+	public SolicitanteEntity () {
 	}
 
 	public TipoDeUsuario getTipoUsuario() {

@@ -5,9 +5,9 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
-@Entity
+@Entity(name = "usuario")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class Usuario {
+public class UsuarioEntity {
 	
 	@Id
 	private Integer id;
@@ -15,14 +15,14 @@ public class Usuario {
 	private String login;
 	private String senha;
 	
-	public Usuario(Integer id, String nome, String login, String senha) {
+	public UsuarioEntity(Integer id, String nome, String login, String senha) {
 		this.id = id;
 		this.nome = nome;
 		this.login = login;
 		this.senha = senha;
 	}
 	
-	public Usuario() {	
+	public UsuarioEntity() {	
 	}
 	
 	public Integer getId() {

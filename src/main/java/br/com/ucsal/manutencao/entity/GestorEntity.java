@@ -3,7 +3,7 @@ package br.com.ucsal.manutencao.entity;
 import javax.persistence.Entity;
 
 @Entity(name = "gestor")
-public class Gestor extends Usuario {
+public class GestorEntity extends UsuarioEntity {
 
 	public String emitirRelatorio() {
 		return null;

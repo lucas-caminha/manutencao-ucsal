@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<link th:href = "@{../bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+		<link th:href = "@{../css/login.css}" rel="stylesheet">
+	</head>
+	<body id="main-header">
+		<div class="container-sm" id="container-principal">
+		<p id="header-form">Sistema de Manutenção</p>
+		<form th:action="@{/usuario/login}">
+		  <div class="mb-3">
+		    <label class="form-label">Login</label>
+		    <input type="text" class="form-control" name="login">
+		    <div class="form-text">Nunca compartilharemos seu e-mail e senha com ninguém.</div>
+		  </div>
+		  <div class="mb-3">
+		    <label class="form-label">Senha</label>
+		    <input type="password" class="form-control" name="senha">
+		  </div>
+		  <button type="submit" class="btn btn-primary">Entrar</button>
+		</form>
+		<br/>
+		<th:if="${#request.getAttribute('notificacao') != null}">
+			<p id="notificacao" th:text="${#request.getAttribute('notificacao')}"></p>
+		</th:if>
+		</div>
+	</body>
+</html>

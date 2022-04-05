@@ -1,0 +1,26 @@
+#container-principal {
+	width:800px; 
+	margin:0 auto;
+	margin-top: 10%;
+}
+
+#main-header {
+    background: #000444;
+    background: -moz-linear-gradient(left,#000444 0,#1d357f 40%,#1d357f 60%,#000444 100%);
+    background: -webkit-gradient(linear,left top,right top,color-stop(0%,#000444),color-stop(40%,#1d357f),color-stop(60%,#1d357f),color-stop(100%,#000444));
+    background: -webkit-linear-gradient(left,#000444 0,#1d357f 40%,#1d357f 60%,#000444 100%);
+    background: -o-linear-gradient(left,#000444 0,#1d357f 40%,#1d357f 60%,#000444 100%);
+    background: -ms-linear-gradient(left,#000444 0,#1d357f 40%,#1d357f 60%,#000444 100%);
+    background: linear-gradient(to right,#000444 0,#1d357f 40%,#1d357f 60%,#000444 100%);
+    width: 100%;
+    font-size: 20px;
+    color: white;
+}
+
+#header-form {
+	text-align: center;
+}
+
+#notificacao {
+	color: lightcoral;
+}

@@ -8,17 +8,17 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity(name = "solicitacao")
-public class Solicitacao {
+public class SolicitacaoEntity {
 
 	@Id
 	private Integer id;
 	private LocalDate dataSolicitacao;
 	@ManyToOne
-	private Usuario usuario;
+	private UsuarioEntity usuario;
 	@OneToOne
-	private Laboratorio laboratorio;
+	private LaboratorioEntity laboratorio;
 	@OneToOne
-	private Servico servico;
+	private ServicoEntity servico;
 
 	public Integer getId() {
 		return id;
@@ -32,10 +32,10 @@ public class Solicitacao {
 	public void setDataSolicitacao(LocalDate dataSolicitacao) {
 		this.dataSolicitacao = dataSolicitacao;
 	}
-	public Usuario getUsuario() {
+	public UsuarioEntity getUsuario() {
 		return usuario;
 	}
-	public void setUsuario(Usuario usuario) {
+	public void setUsuario(UsuarioEntity usuario) {
 		this.usuario = usuario;
 	}
 	
