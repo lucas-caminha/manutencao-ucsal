@@ -5,9 +5,67 @@
 		<link th:href = "@{../css/login.css}" rel="stylesheet">
 	</head>
 	<body id="main-header">
-		<div class="container-sm" id="container-principal">
-		<p id="header-form">Sistema de Manutenção</p>
-
+	
+		<div th:if="${session.gestor != null}">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  	<a class="navbar-brand">&nbsp;Sistema de Manutenção</a>
+			  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			   	 	<span class="navbar-toggler-icon"></span>
+			  	</button>
+			  	<div class="collapse navbar-collapse" id="navbarText" style="justify-content: space-between;">
+				    <ul class="navbar-nav mr-auto">
+				      <li class="nav-item active">
+				        <a class="nav-link" href="#">Inicio</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Cadastro de Solicitante</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Cadastro de Laboratorios</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Solicitações</a>
+				      </li>		
+				       <li class="nav-item">
+				        <a class="nav-link" href="#">Solicitar Reserva</a>
+				      </li>	
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Reservas</a>
+				      </li>			    			      
+				    </ul>
+				    <span class="" style="display: flex; ">
+				    	<a class="nav-link" id="usuario-nav" th:text="'Bem vindo, ' + ${session.gestor.nome} + '! - Gestor'"></a>
+				    	<a class="nav-link" th:href="@{/usuario/logoff}">Logoff</a>
+				    </span>
+			  	</div>
+			</nav>
 		</div>
+		
+		
+		<div th:if="${session.solicitante != null}">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  	<a class="navbar-brand">&nbsp;Sistema de Manutenção</a>
+			  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			   	 	<span class="navbar-toggler-icon"></span>
+			  	</button>
+			  	<div class="collapse navbar-collapse" id="navbarText" style="justify-content: space-between;">
+				    <ul class="navbar-nav mr-auto">
+				      <li class="nav-item active">
+				        <a class="nav-link" href="#">Inicio</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Solicitar Reserva</a>
+				      </li>		    			      
+				    </ul>
+				    <span class="" style="display: flex; ">
+				    	<a class="nav-link" id="usuario-nav" th:text="'Bem vindo, ' + ${session.solicitante.nome} + '! - Solicitante'"></a>
+				    	<a class="nav-link" th:href="@{/usuario/logoff}">Logoff</a>
+				    </span>
+			  	</div>
+			</nav>
+		</div>
+		
+
+		
 	</body>
 </html>

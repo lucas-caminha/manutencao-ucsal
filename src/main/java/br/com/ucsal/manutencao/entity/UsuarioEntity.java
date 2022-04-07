@@ -49,6 +49,11 @@ public class UsuarioEntity {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	@Override
+	public String toString() {
+		return "UsuarioEntity [id=" + id + ", nome=" + nome + ", login=" + login + ", senha=" + senha + "]";
+	}
 	
 }
 

@@ -17,5 +17,11 @@ public class SolicitanteEntity extends UsuarioEntity {
 	public void setTipoUsuario(TipoDeUsuario tipoUsuario) {
 		this.tipoUsuario = tipoUsuario;
 	}
+
+
+	@Override
+	public String toString() {
+		return super.toString() + "SolicitanteEntity [tipoUsuario=" + tipoUsuario + "]";
+	}
 	
 }
